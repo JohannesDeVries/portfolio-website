@@ -1,0 +1,408 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: #222733;
+}
+
+body {
+  font-family: 'Mukta', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h3 {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding: 35px 0 25px 0;
+}
+
+i {
+  margin-right: 6px;
+}
+
+/* ........................................................................HEADER */
+.navbar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  border-bottom: 2px solid #328be5;
+  z-index: 10;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navbar li {
+  margin: 8px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.navbar a {
+  transition: color 0.2s linear;
+}
+
+.navbar a:hover {
+  color: #328be5;
+}
+
+/* ........................................................................HOME */
+
+#home {
+  background-color: #f0f0f0;
+}
+
+.home_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 auto;
+  width: 70%;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #328be5;
+}
+
+.home_heading {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 30px;
+}
+
+.home_about {
+  flex-grow: 1;
+  flex-basis: 0;
+  margin: 40px 30px;
+}
+
+.home_about p {
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+.home_heading a {
+  margin: 25px 25px 25px 0;
+  padding: 20px;
+  border: solid #328be5;
+  background-color: transparent;
+  color: #328be5;
+  border-radius: 20px;
+  transition: background-color 0.2s linear, border 0.2s linear,
+    color 0.2s linear;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.home_heading a:hover {
+  background-color: #328be5;
+  border: solid #328be5;
+  color: white;
+}
+
+/* ........................................................................PORTFOLIO */
+
+#portfolio {
+  scroll-margin-top: 59px;
+}
+
+.projects_container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(400px, 1fr));
+  grid-gap: 60px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  max-width: 1400px;
+  padding: 0 15px;
+  justify-items: center;
+}
+
+.project_card {
+  max-width: 600px;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card_image_container {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.card_image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: filter 0.2s linear;
+}
+
+.visit_site_btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 8;
+  padding: 15px 20px;
+  background-color: #328be5;
+  color: white;
+  border-radius: 10px;
+  transition: background-color 0.1s linear;
+}
+
+.visit_site_btn:hover {
+  background-color: #317dc9;
+}
+
+.card_image:hover,
+.visit_site_btn:hover + .card_image {
+  filter: blur(2px) brightness(40%);
+}
+
+.card_image_container:hover .visit_site_btn {
+  display: block;
+}
+
+.card_description {
+  margin: 15px;
+}
+
+h4 {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.project_card p {
+  margin: 15px 0;
+  font-weight: 400;
+}
+
+.code_links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 15px;
+}
+
+.code_links a {
+  margin: 5px 0;
+  font-size: 18px;
+  font-weight: 700;
+  transition: color 0.2s linear;
+}
+
+.code_links a,
+.fab {
+  transition: color 0.2s linear;
+}
+
+.code_links a:hover .fab,
+.code_links a:hover {
+  color: #328be5;
+}
+
+.inactive_link {
+  pointer-events: none;
+  cursor: default;
+}
+
+/* ........................................................................CONTACT */
+
+#contact {
+  scroll-margin-top: 59px;
+  background-color: #f0f0f0;
+  min-height: calc(100vh - 59px - 30px - 12px);
+  position: relative;
+}
+
+.contact_container ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.contact_container li,
+.contact_container a {
+  margin: 15px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.contact_container a,
+.fab {
+  transition: color 0.2s linear;
+}
+
+.contact_container a:hover .fab,
+.contact_container a:hover {
+  color: #328be5;
+}
+
+/* ........................................................................FOOTER */
+
+#footer p {
+  text-align: right;
+  margin: 8px;
+  margin-right: 30px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ........................................................................RESPONSIVE */
+
+@media (max-width: 1550px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .home_container {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1230px) {
+  .home_container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .home_container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1030px) {
+  .home_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .home_heading {
+    flex-grow: 0;
+    flex-basis: auto;
+    margin: 90px 0 0 0;
+  }
+
+  .home_about {
+    flex-grow: 0;
+    flex-basis: auto;
+    margin: 0 0 40px 0;
+  }
+
+  .projects_container {
+    grid-template-columns: repeat(1, minmax(290px, 1fr));
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  .home_heading a {
+    padding: 15px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  h3 {
+    font-size: 40px;
+  }
+
+  .visit_site_btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  .project_card p {
+    font-size: 14px;
+  }
+
+  .code_links a {
+    font-size: 16px;
+  }
+
+  .contact_container li,
+  .contact_container a {
+    font-size: 18px;
+  }
+
+  #footer p {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 370px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 23px;
+  }
+
+  .home_about p {
+    font-size: 13px;
+  }
+
+  .navbar li {
+    font-size: 20px;
+  }
+}
