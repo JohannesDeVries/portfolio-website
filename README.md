@@ -15,6 +15,6 @@ I developed this website to showcase the personal projects I’ve worked on. I b
 
 I used Netlify to deploy the website.
 
-Click here to visit the website.
+Click [here](https://johannesdevries.netlify.app/) to visit the website.
 
 
